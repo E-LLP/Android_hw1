@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hw1</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_view">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </string>
+    <string name="autumn_leaf">Icon of MainPage</string>
+    <string name="MPButton1">Button 1</string>
+    <string name="MPButton2">Button 2</string>
+    <string name="MPDialogButton">Dialog</string>
+    <string name="MPHomeButton">Open Page 1</string>
+    <string name="MPGearButton">Open Page 2</string>
+    <string name="MPMailButton">Open Page 3</string>
+    <string name="EdText">enter text</string>
+    <string name="DialogOK">OK</string>
+    <string name="DialogCancel">Cancel</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="item"> Заголовок </string>
+	<string name="robot_view"> Robot </string>
+	<string name="github_view"> Github </string>
+</resources>
