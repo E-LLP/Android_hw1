@@ -21,37 +21,25 @@
     	    android:layout_height="wrap_content"
     	    android:src="@drawable/autumn_leaf"/>
 
-    	<LinearLayout
-    	    android:id="@+id/MPLayoutButtons"
-    	    android:layout_width="match_parent"
-    	    android:layout_height="wrap_content"
-    	    android:orientation="vertical"
-    	    android:layout_toRightOf="@id/MainPageImageView"
-    	    android:layout_alignTop="@id/MainPageImageView"
-    	    android:layout_alignBottom="@id/MainPageImageView"
-    	    android:paddingLeft="10dp">
-    	  	     		
-    		<Button
-    	    	android:id="@+id/MPButton1"
-    	    	android:layout_width="match_parent"
-    	    	android:layout_height="wrap_content"
-    	    	android:layout_weight="1"
-    	    	android:layout_marginBottom="10dp"
-    	    	android:text="@string/MPButton1"
-    	    	android:gravity="center_vertical|center_horizontal"
-    	    	android:background="@drawable/roundedbutton"/>
-     		<Button
-    	    	android:id="@+id/MPButton2"
-    	    	android:layout_width="match_parent"
-    	    	android:layout_height="wrap_content"
-    	    	android:layout_weight="1"
-    	    	android:layout_marginTop="10dp"
-    	    	android:text="@string/MPButton2"
-    	    	android:gravity="center_vertical|center_horizontal"
-    	    	android:background="@drawable/roundedbutton"/>
-     		    
-    	</LinearLayout>    	    
-         
+    	<Button
+    	   	android:id="@+id/MPButton1"
+    	   	android:layout_width="match_parent"
+    	   	android:layout_height="40dp"
+    	   	android:text="@string/MPButton1"
+    	   	android:layout_toRightOf="@id/MainPageImageView"
+    	   	android:layout_alignTop="@id/MainPageImageView"
+    	   	android:layout_marginLeft="10dp"
+    	   	android:background="@drawable/roundedbutton"/>
+     	
+     	<Button
+    	   	android:id="@+id/MPButton2"
+    	   	android:layout_width="match_parent"
+    	   	android:layout_height="40dp"
+    	   	android:text="@string/MPButton2"
+    	   	android:layout_toRightOf="@id/MainPageImageView"
+    	   	android:layout_alignBottom="@id/MainPageImageView"
+    	   	android:layout_marginLeft="10dp"
+    	   	android:background="@drawable/roundedbutton"/>
     <TextView
         android:id="@+id/MPTextView"
         android:layout_width="wrap_content"
@@ -62,7 +50,7 @@
     <Button
     	android:id="@+id/MPDialogButton"
     	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
+    	android:layout_height="30dp"
     	android:layout_below="@id/MPTextView"
     	android:layout_marginBottom="5dp"
     	android:text="@string/MPDialogButton"
@@ -90,7 +78,7 @@
         <ImageButton
             android:id="@+id/MPHomeButton"
             android:contentDescription="@string/MPHomeButton"
-            android:src="@drawable/bank_basic_green"
+            android:src="@drawable/bank_basic_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -101,12 +89,13 @@
         <ImageButton 
             android:id="@+id/MPGearButton"
             android:contentDescription="@string/MPGearButton"
-            android:src="@drawable/gear_basic_green"
+            android:src="@drawable/gear_basic_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_gravity="bottom"
-            android:background="@drawable/navbutton"/>
+            android:background="@drawable/navbutton"
+            android:onClick="StartThirdActivity"/>
         
         <ImageButton
             android:id="@+id/MPMailButton"
@@ -116,7 +105,8 @@
             android:layout_weight="1"
             android:background="@drawable/navbutton"
             android:contentDescription="@string/MPMailButton"
-            android:src="@drawable/mail_basic_green" />
+            android:src="@drawable/mail_basic_button"
+            android:onClick="StartForthActivity" />
 
     </LinearLayout>
 </RelativeLayout>

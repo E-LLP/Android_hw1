@@ -15,12 +15,22 @@ public class SecondActivity extends Activity {
 		
 		Intent intent = getIntent();
 	    String message = intent.getStringExtra(MainActivity.MSG_TO_SECOND_ACTIVITY);
+	    System.out.println(message);
+	    int length = message.length();
 	    
 	    TextView TViewLeft = (TextView) findViewById(R.id.SPTextView1);
 	    TextView TViewRight = (TextView) findViewById(R.id.SPTextView2);
-	    TViewLeft.setText(message);
-	    TViewRight.setText(message);
+	    if (!message.equals("")) {
+	    	TViewLeft.setText(message.substring(0, length/2));
+	    	TViewRight.setText(message.substring(length/2, length));
+	    }
+	    else {
+	    	String noText = "Нет текста";
+	    	TViewLeft.setText(noText);
+	    	TViewRight.setText(noText);
+	    }
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

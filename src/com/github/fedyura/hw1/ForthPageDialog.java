@@ -8,17 +8,15 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
 
-public class EditMessageDialogFragment extends DialogFragment {
+public class ForthPageDialog extends DialogFragment {
 	
 	public interface EditMessageDialogListener {
-        public void onDialogPositiveClick(DialogFragment dialog, String message);
+        public void onDialogPositiveClick(DialogFragment dialog);
         public void onDialogNegativeClick(DialogFragment dialog);
     }
 	
 	EditMessageDialogListener mListener;
-	private EditText editText;
 	
 	@Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -26,8 +24,7 @@ public class EditMessageDialogFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.mp_dialog, null);
-        editText = (EditText) dialogView.findViewById(R.id.editTextDialog);
+        View dialogView = inflater.inflate(R.layout.fp_dialog, null);
         
 		builder.setView(dialogView)
         	.setPositiveButton(R.string.DialogOK, new DialogInterface.OnClickListener() {
@@ -37,14 +34,13 @@ public class EditMessageDialogFragment extends DialogFragment {
             		//LayoutInflater inflater = getActivity().getLayoutInflater();
             		//View dialogView = inflater.inflate(R.layout.mp_dialog, null);
             		//EditText ed = (EditText) dialogView.findViewById(R.id.editTextDialog);
-            		String message = editText.getText().toString();
-            		mListener.onDialogPositiveClick(EditMessageDialogFragment.this, message);
+            		mListener.onDialogPositiveClick(ForthPageDialog.this);
             	}
         	})
         	.setNegativeButton(R.string.DialogCancel, new DialogInterface.OnClickListener() {
                public void onClick(DialogInterface dialog, int id) {
                    //LoginDialogFragment.this.getDialog().cancel();
-            	   mListener.onDialogNegativeClick(EditMessageDialogFragment.this);
+            	   mListener.onDialogNegativeClick(ForthPageDialog.this);
                }
            });
         
@@ -56,6 +52,7 @@ public class EditMessageDialogFragment extends DialogFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         // Verify that the host activity implements the callback interface
+        
         try {
             // Instantiate the NoticeDialogListener so we can send events to the host
             mListener = (EditMessageDialogListener) activity;
@@ -65,4 +62,5 @@ public class EditMessageDialogFragment extends DialogFragment {
                     + " must implement NoticeDialogListener");
         }
     }
+
 }

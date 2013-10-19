@@ -51,12 +51,10 @@ public class MainActivity extends FragmentActivity
     // Fragment.onAttach() callback, which it uses to call the following methods
     // defined by the NoticeDialogFragment.NoticeDialogListener interface
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
+    public void onDialogPositiveClick(DialogFragment dialog, String message) {
         // User touched the dialog's positive button
-        //  dialog.getString(RESULT_OK);
-    	//this.findViewById(android.R.id.edit   MPeditText);
-    	EditText edText = (EditText) findViewById(R.id.MPeditText);
-    	edText.setText(EditMessageDialogFragment.DialogMsg);
+        EditText edText = (EditText) findViewById(R.id.MPeditText);
+    	edText.setText(message);
     }
 
     @Override
@@ -72,8 +70,17 @@ public class MainActivity extends FragmentActivity
         String message = editText.getText().toString();
         intent.putExtra(MSG_TO_SECOND_ACTIVITY, message);
         startActivity(intent);
-    	
     }
     
-
+    public void StartThirdActivity(View view) {
+    	
+    	Intent intent = new Intent(this, ThirdActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void StartForthActivity(View view) {
+    	
+    	Intent intent = new Intent(this, ForthActivity.class);
+    	startActivity(intent);
+    }
 }

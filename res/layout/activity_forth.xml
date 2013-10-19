@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForthActivity" >
+
+    <RelativeLayout
+        android:id="@+id/FPLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+    	    android:id="@+id/FPImageView"
+    	    android:contentDescription="@string/autumn_leaf"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:src="@drawable/autumn_leaf"/>
+    	<TextView
+        	android:id="@+id/FPTextView"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/FPtext_view"
+        	android:layout_toRightOf="@id/FPImageView"
+        	android:layout_alignBottom="@id/FPImageView"
+        	android:textSize="12sp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/FPLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_alignParentBottom="true">
+        <ImageView
+    	    android:id="@+id/FPImageViewBottom"
+    	    android:contentDescription="@string/autumn_leaf"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:src="@drawable/autumn_leaf"/>
+        <TextView
+        	android:id="@+id/FPTextViewBottom"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/FPtext_view"
+        	android:layout_toLeftOf="@id/FPImageViewBottom"
+        	android:layout_alignTop="@id/FPImageViewBottom"
+        	android:textSize="12sp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/FPLayoutMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:layout_below="@id/FPLayout1"
+    	android:layout_above="@id/FPLayoutBottom"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp">
+    	<Button
+    		android:id="@+id/MPDialogButton"
+    		android:layout_width="match_parent"
+    		android:layout_height="30dp"
+    		android:text="@string/MPDialogButton"
+    		android:textSize="14sp"
+    		android:layout_centerVertical="true"
+    		android:layout_centerHorizontal="true"
+    		android:onClick="openDialog"
+    		android:background="@drawable/dialog_rounded_button"/>    
+    </RelativeLayout>
+
+</RelativeLayout>
